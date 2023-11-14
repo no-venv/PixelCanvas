@@ -62,7 +62,7 @@ function init:New(Width : number, Height : number, Parent : Instance )
 	
 	local self = {}
 	
-	# Array of RGBA Pixels ( width * height * 4 )
+	-- Array of RGBA Pixels ( width * height * 4 )
 	self.Pixels = table.create((Width*Height*4),1)
 	
 	self.EasyPixels = (function()
