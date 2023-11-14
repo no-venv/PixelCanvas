@@ -20,7 +20,7 @@ function Canvas:Draw()
 	local self : Canvas = self
 	
 	local index = 1
-	
+
 	for i=1,(self.Image.Size.X*self.Image.Size.Y*4),4 do
 		
 		self.Pixels[i] = self.EasyPixels[index][1]
@@ -62,6 +62,7 @@ function init:New(Width : number, Height : number, Parent : Instance )
 	
 	local self = {}
 	
+	# Array of RGBA Pixels ( width * height * 4 )
 	self.Pixels = table.create((Width*Height*4),1)
 	
 	self.EasyPixels = (function()
