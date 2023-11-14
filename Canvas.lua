@@ -34,8 +34,9 @@ function Canvas:Draw()
 	
 end
 
-function Canvas:SetPixel(x,y,r,g,b)
-	
+function Canvas:SetPixel(x : number ,y : number ,r : number ,g : number ,b : number)
+	-- rgb values should be in 0 to 1 scale
+	-- convert by doing R/255, G/255, B/255
 	local self : Canvas = self
 	
 	local cursor = index(x,y,self.Image.Size.X)
